@@ -1,0 +1,19 @@
+<% include partials/header %>
+<div class="ui main text container segment">
+    <div class="ui huge header">Inicio de sesión</div>
+    <form class="ui form" action="/login/u" method="POST">
+        <div class="field">
+            <label><h3>Correo</h3></label>
+            <input type="text" name="logCorreo" placeholder="Inserta tu e-mail">
+        </div>
+        <div class="field">
+            <label><h3>Contraseña</h3></label>
+            <input type="password" name="logContraseña" placeholder="Inserta tu contraseña">
+        </div>
+        <button class="btn btn-primary" type="submit">Iniciar sesión</button>
+        <div id="forgot">
+          <span><a href="/recuperar">¿Olvidaste tu contraseña?</a></span>
+        </div>
+    </form>
+</div>
+<% include partials/footer %>

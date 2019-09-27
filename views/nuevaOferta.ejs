@@ -1,0 +1,25 @@
+<% include partials/header %>
+<div class="ui main text container segment">
+    <div class="ui huge header">Nueva oferta</div>
+    <form class="ui form" action="/e/o" method="POST">
+        <div class="field">
+            <label>Vacante</label>
+            <input type="text" name="oferta[titulo]" placeholder="vacante">
+        </div>
+        <div class="field">
+            <label>Sueldo</label>
+            <input type="number" name="oferta[sueldo]" placeholder="sueldo">
+        </div>
+        <div class="field">
+            <label>Horario</label>
+            <input type="time" name="oferta[horarioIn]">
+            <input type="time" name="oferta[horarioFi]">
+        </div>
+        <div class="field">
+            <label>Descripción de actividades</label>
+            <textarea name="oferta[descripcion]"></textarea>
+        </div>
+        <input class="ui purple big basic button" type="submit" value="Subir">
+    </form>
+</div>
+<% include partials/footer %>

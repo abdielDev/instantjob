@@ -1,0 +1,24 @@
+<% include partials/header %>
+<div class="ui main text container segment">
+    <div class="ui huge header">Editar <%= usuario.nombre %></div>
+    <form class="ui form" action="/e/<%= usuario._id %>?_method=PUT" method="POST">
+        <div class="field">
+            <label>Nombre</label>
+            <input type="text" name="usuario[nombre]" value="<%= usuario.nombre %>">
+        </div>
+        <div class="field">
+            <label>Correo</label>
+            <input type="text" name="usuario[correo]" value="<%= usuario.correo %>">
+        </div>
+        <div class="field">
+            <label>direccion</label>
+            <input type="text" name="usuario[direccion]" value="<%= usuario.direccion %>">
+        </div>
+        <div class="field">
+            <label>Descripción</label>
+            <textarea name="usuario[descripcion]"><%= usuario.descripcion %></textarea>
+        </div>
+        <input class="ui purple big basic button" type="submit" value="Actualizar">
+    </form>
+</div>
+<% include partials/footer %>

@@ -1,0 +1,32 @@
+<% include partials/header %>
+<div class="ui main text container segment">
+    <div class="ui huge header">Editar <%= oferta.titulo %></div>
+    <form class="ui form" action="/e/o/<%= oferta._id %>?_method=PUT" method="POST">
+        <div class="field">
+            <label>Puesto</label>
+            <input type="text" name="oferta[titulo]" value="<%= oferta.titulo %>">
+        </div>
+        <div class="field">
+            <label>Sueldo</label>
+            <input type="text" name="oferta[direccion]" value="<%= oferta.sueldo %>">
+        </div>
+        <div class="field">
+            <label>Horario de inicio</label>
+            <% var index = oferta.horario.indexOf("a") -1; %>
+            <% var index2 = oferta.horario.indexOf("a") +2; %>
+            <% horarioIn = oferta.horario.substr(0, index);%>
+            <% horarioFi = oferta.horario.substr(index2);%>
+            <input type="text" name="oferta[horarioIn]" value="<%= horarioIn %>">
+        </div>
+        <div class="field">
+          <label>Horario de Finalización</label>
+          <input type="text" name="oferta[horarioFi]" value="<%= horarioFi %>">
+        </div>
+        <div class="field">
+            <label>Descripción</label>
+            <textarea name="oferta[descripcion]"><%= oferta.descripcion %></textarea>
+        </div>
+        <input class="ui purple big basic button" type="submit" value="Guardar">
+    </form>
+</div>
+<% include partials/footer %>

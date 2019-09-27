@@ -1,0 +1,30 @@
+<% include partials/header %>
+  <div class="container border">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="well well-lg" id="messages">
+          <div class="messagge">
+            <span><strong>Abdiel Ortega: </strong></span><span>Necesito ayuda</span>
+          </div>
+          <div class="messagge">
+            <span><strong>Equipo de soporte: </strong></span><span>Que tal estamos para servirle de 12:00 pm a 8:00 am</span>
+          </div>
+          <div class="messagge">
+            <span><strong>Abdiel Ortega: </strong></span><span>¿Cómo registro mi empresa?</span>
+          </div>
+          <div class="messagge">
+            <span><strong>Equipo de soporte: </strong></span><span>Ingresa esta dirección en el navegador http://127.0.0.1:3000/e/nuevo</span>
+          </div>
+        </div>
+        <form onsubmit="return addMessage(this)">
+          <div class="input-group">
+            <input type="text" id="texto" class="form-control" placeholder="Escribe tu mensaje">
+            <span class="input-group-btn">
+              <button id="button" class="btn btn-default" type="submit">Enviar</button>
+            </span>
+          </div><!-- /input-group -->
+        </form>
+      </div>
+    </div>
+  </div>
+<% include partials/footer %>

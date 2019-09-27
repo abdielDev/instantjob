@@ -1,0 +1,28 @@
+<% include ./partials/header %>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Ofertas</h1>
+
+        </div>
+    </header>
+
+
+
+    <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+      <% ofertas.forEach(function(oferta){ %>
+          <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <div class="caption">
+                  <h3><%= oferta.titulo %></h3>
+                </div>
+                <p>
+                  <a href="/u/o/<%= oferta._id %>" class="btn btn-primary">Más información</a>
+                </p>
+                <p><strong><%= oferta.descripcion.substring(0, 30) %>...</strong></p>
+            </div>
+          </div>
+      <% }); %>
+    </div>
+</div>
+<% include ./partials/footer %>

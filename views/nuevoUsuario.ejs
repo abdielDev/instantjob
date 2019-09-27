@@ -1,0 +1,55 @@
+<% include partials/header %>
+<div class="ui main text container segment">
+    <div class="ui huge header">Nuevo usuario</div>
+    <form class="ui form"action="/register/u" method="POST" encType="multipart/form-data">
+        <div class="field">
+            <label>Nombre</label>
+            <input type="text" name="nombre" placeholder="nombre">
+        </div>
+        <div class="field">
+            <label>Apellido</label>
+            <input type="text" name="apellido" placeholder="apellido">
+        </div>
+        <div class="field">
+            <label>Correo</label>
+            <input type="text" name="correo" placeholder="correo">
+        </div>
+        <div style="display: none;" class="alert alert-danger" role="alert">Correo no disponible</div>
+        <div class="field">
+            <label>Edad</label>
+            <input type="text" name="edad" placeholder="edad">
+        </div>
+        <div class="field">
+            <label>Número</label>
+            <input type="text" name="numero" placeholder="numero">
+        </div>
+        <div class="field">
+            <label>Contraseña</label>
+            <input type="password" name="contraseña" placeholder="contraseña">
+        </div>
+        <div style="display: none;" class="password-alert alert alert-danger" role="alert">Las contraseñas no coinciden.</div>
+        <div class="field">
+            <label>Confirmar Contraseña</label>
+            <input type="password" name="contraseñaConf" placeholder="confirmar contraseña">
+        </div>
+        <div class="field">
+            <label>Foto de perfil (opcional)</label>
+            <input type="file" name="foto">
+        </div>
+        <div class="field">
+            <label>Curriculum</label>
+            <input type="file" name="curriculum">
+        </div>
+        <div style="display: none;" class="curriculum-alert alert alert-danger" role="alert">Debes subir un curriculum</div>
+        <div class="field">
+          <input type="checkbox" name="terminos"><span> Acepto los <a href="/terms">terminos y condiciones </a>de uso.</span>
+        </div>
+        <div style="display: none;" class="terms-field alert alert-danger" role="alert">Tienes que aceptar los terminos.</div>
+        <div class="field">
+          <div class="g-recaptcha" data-sitekey="6Lc0WX4UAAAAAH5lEWkgc9LSYoQk5srJQiAHu77X"></div>
+        </div>
+        <input class="ui purple big basic button" type="submit" value="Registrar">
+    </form>
+</div>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<% include partials/footer %>

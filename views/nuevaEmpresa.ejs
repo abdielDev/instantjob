@@ -1,0 +1,53 @@
+<% include partials/header %>
+<div class="ui main text container segment">
+    <div class="ui huge header">Nueva empresa</div>
+    <form class="ui form"action="/register/e" method="POST" encType="multipart/form-data">
+        <div class="field">
+            <label>Nombre de la empresa</label>
+            <input type="text" name="nombre" placeholder="nombre">
+        </div>
+        <div class="field">
+            <label>Correo eléctronico</label>
+            <input type="text" name="correo" placeholder="correo">
+        </div>
+        <div class="field">
+            <label>RFC</label>
+            <input type="text" name="rfc" placeholder="rfc">
+        </div>
+        <div style="display: none;" class="alert-rfc alert alert-danger" role="alert">RFC invalido.</div>
+        <div style="display: none;" class="alert-rfc-good alert alert-success" role="alert">RFC valido.</div>
+        <div class="field">
+            <label>Direccion</label>
+            <input type="text" name="direccion" placeholder="direccion">
+        </div>
+        <div class="field">
+            <label>Contraseña</label>
+            <input type="password" name="contraseña" placeholder="contraseña">
+        </div>
+        <div style="display: none;" class="password-alert alert alert-danger" role="alert">Las contraseñas no coinciden.</div>
+        <div class="field">
+            <label>Confirmar contraseña</label>
+            <input type="password" name="contraseñaConf" placeholder="Repite la contraseña">
+        </div>
+        <div class="field">
+            <label>Logo</label>
+            <input type="file" name="logo">
+        </div>
+        <div style="display: none;" class="logo-alert alert alert-danger" role="alert">Debes seleccionar un logo.</div>
+        <div class="field">
+            <label>Descripción de la empresa</label>
+            <textarea name="descripcion"></textarea>
+        </div>
+        <div style="display: none;" class="descripcion-alert alert alert-danger" role="alert">Este campo debe contener al menos 100 caracteres</div>
+        <div class="field">
+          <input type="checkbox" name="terminos"><span> Acepto los <a href="/terms">terminos y condiciones </a>de uso.</span>
+        </div>
+        <div style="display: none;" class="terms-field alert alert-danger" role="alert">Tienes que aceptar los terminos.</div>
+        <div class="field">
+          <div class="g-recaptcha" data-sitekey="6Lc0WX4UAAAAAH5lEWkgc9LSYoQk5srJQiAHu77X"></div>
+        </div>
+        <input class="ui purple big basic button" type="submit" value="Registrar">
+    </form>
+</div>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<% include partials/footer %>

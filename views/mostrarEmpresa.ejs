@@ -1,0 +1,33 @@
+<% include partials/header %>
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= usuario.nombre %></div>
+    <div class="ui top attached">
+        <div class="item thumbnail">
+          <img class="ui centered rounded image size" src="../<%= usuario.logo %>">
+          <div class="content">
+            <h2>Correo</h2>
+            <span><%= usuario.correo %></span>
+          </div>
+          <div class="content">
+            <h2>Direccion</h2>
+            <span><%= usuario.direccion %></span>
+          </div>
+          <div class="content">
+            <h2>Numero</h2>
+            <span><%= usuario.descripcion %></span>
+          </div>
+        </div>
+        <div class="botones">
+          <a class="ui purple basic button" href="/e/o">Ofertas</a>
+        </div>
+        <div class="botones">
+          <a class="ui orange basic button" href="/e/<%= usuario._id %>/editar">Editar</a>
+        </div>
+        <div class="botones">
+          <form id="delete" action="/e/<% usuario._id %>?_method=DELETE" method="POST">
+            <button class="ui red basic button">Dar de baja</button>
+          </form>
+        </div>
+    </div>
+</div>
+<% include partials/footer %>

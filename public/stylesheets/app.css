@@ -1,0 +1,75 @@
+.botones {
+  display: inline-block;
+}
+
+.thumbnail img {
+    height:250px;
+    width:100%;
+}
+.content {
+  padding-bottom: 20px;
+}
+
+#forgot {
+  margin-top: 20px;
+}
+
+.border {
+  border: 8px solid #90A4AE;
+  padding: 20px;
+}
+
+.messagge {
+  margin-bottom: 15px;
+}
+
+.donar {
+  margin-top: 20px;
+}
+
+.centrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  height: 200px;
+  background-color: #000000;
+  padding: 40px;
+}
+
+.centro {
+  text-align: center;
+}
+
+.iluminar {
+  color: white;
+}
+
+li.social-net {
+  display: inline;
+  padding-right: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.big-icons {
+  font-size: 2em;
+  color: #ffffff;
+}
+
+div.col-md-4 {
+  height: 90px;
+}
+
+.terminos {
+  border-radius: solid 2px #FFF;
+}

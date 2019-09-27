@@ -1,0 +1,31 @@
+<% include partials/header %>
+  <div class="ui main text container segment">
+      <div class="ui huge header"><%= oferta.titulo %></div>
+      <div class="ui top attached">
+          <div class="item thumbnail">
+              <div class="content">
+                <h2>Sueldo</h2>
+                <span>$ <%= oferta.sueldo %></span>
+              </div>
+              <div class="content">
+                <h2>Horario</h2>
+                <span>De <%= oferta.horario %></span>
+              </div>
+              <div class="description">
+                <h2>Descripción</h2>
+                <p><%= oferta.descripcion %></p>
+              </div>
+              <div class="description">
+                <h2>Empresa</h2>
+                <p><a href="/u/e/<%= oferta.empresa._id %>"><%= oferta.empresa.nombre %></a></p>
+              </div>
+          </div>
+          <div class="botones">
+            <form id="delete" action="/u/o/<%= oferta._id %>" method="POST">
+              <button class="ui orange basic button">Postularme</button>
+            </form>
+          </div>
+      </div>
+
+  </div>
+<% include partials/footer %>
